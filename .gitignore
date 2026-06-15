@@ -1,0 +1,74 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Producción
+dist/
+build/
+web-build/
+
+# Expo / Seguridad / BD Locales
+.expo/
+*.jks
+*.p8
+*.keystore
+*.pyc
+*.sqlite
+*.db
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.dockerdata/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignorar todas las carpetas que empiezan con punto
+.*/
+.*
+
+# EXCEPCIONES CRÍTICAS: Permitir que Git suba la configuración de DevSecOps y Seguridad
+!/.gitignore
+!/.github/
+!/.github/**
+!/.husky/
+!/.husky/**
+!/.secretlintrc.json
+!.eslintrc*
+!/.prettierrc*
+skills/
+skills-lock.json
+logs.txt
+backend/uploads/registros/
+backend/uploads/evidencias/
+backend/gen_hash_admin.js
+backend/gen_hash_direct.js
+
+
+
+CLOUD_INFRA_archivos/
+CLOUD_INFRA.doc 
+CLOUD_INFRA.md
+
+/docs
+/scratch

@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "InformaTech",
+    "slug": "app-movil",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo-pixi.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logo-pixi.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.informatech.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo-pixi.png",
+        "backgroundColor": "#0f172a"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB9tMBzBOy1jdpov_EPv4IUh0h3KV1mvCc"
+        }
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d41d27ea-38d6-4d66-8f86-c21cf8092c10"
+      }
+    },
+    "updates": {
+      "enabled": false
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": false,
+            "allowBackup": false
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
+  }
+}
