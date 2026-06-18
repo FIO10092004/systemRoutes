@@ -64,11 +64,11 @@ const apiLimiter = rateLimit({
   message: { error: 'Demasiadas peticiones desde esta IP, por favor intente más tarde.' }
 });
 
-const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:5173', 'http://localhost:3000', 'https://rutazero-portal-94wv.onrender.com', 'https://rutazero-portal-aqm3.onrender.com'];
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['http://localhost:5173', 'http://localhost:3000'];
 app.use(cors({
   origin: function (origin, callback) {
-    // Permitir requests sin origin (ej. mobile app curl, etc) o que estén en la lista
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Permitir requests sin origin (ej. mobile app curl), orígenes en la lista local, o dominios de Render dinámicos
+    if (!origin || allowedOrigins.includes(origin) || (origin && origin.endsWith('.onrender.com'))) {
       callback(null, true);
     } else {
       console.warn(`[CORS Blocked] Origen rechazado: ${origin}`);
